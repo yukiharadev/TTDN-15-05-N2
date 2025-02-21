@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_lich_su_cong_tac_form" model="ir.ui.view">
+            <field name="name">lich_su_cong_tac</field>
+            <field name="model">lich_su_cong_tac</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">PB</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="nhan_vien_id"/>
+                            <field name="phong_ban_id"/>
+                            <field name="chuc_vu_id"/>
+                            <field name="loai_cv"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="view_lich_su_cong_tac_tree" model="ir.ui.view">
+            <field name="name">lich_su_cong_tac</field>
+            <field name="model">lich_su_cong_tac</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ma_dinh_danh"/>
+                    <field name="ten_chuc_vu"/>
+                    <field name="mo_ta"/>
+                    <field name="luong_co_ban"/>
+                    <field name="phu_cap"/>
+                    <field name="phong_ban_ten"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="chuc_vu_search">
+            <field name="model">chuc_vu</field>
+            <field name="arch" type="xml">
+                <search>
+                     <field name="ma_dinh_danh"/>
+                    <field name="ten_chuc_vu"/>
+                    <field name="mo_ta"/>
+                    <field name="luong_co_ban"/>
+                    <field name="phu_cap"/>
+                    <field name="phong_ban_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_chuc_vu" model="ir.actions.act_window">
+            <field name="name">PB</field>
+            <field name="res_model">chuc_vu</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "chuc_vu_search"/>
+        </record>
+    </data>
+</odoo>
