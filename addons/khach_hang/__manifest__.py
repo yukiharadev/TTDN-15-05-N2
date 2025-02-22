@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 {
     'name': "khach_hang",
 
@@ -9,8 +10,8 @@
         Long description of module's purpose
     """,
 
-    'author': "Yukihara",
-    'website': "http://www.yukihara.com",
+    'author': "My Company",
+    'website': "http://www.yourcompany.com",
 
     'category': 'Uncategorized',
     'version': '0.1',
@@ -19,8 +20,10 @@
 
     'data': [
         'security/ir.model.access.csv',
+        'views/khach_hang.xml',
         'views/menu.xml',
     ],
+    # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
