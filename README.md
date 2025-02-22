@@ -12,11 +12,9 @@
 
 ## 1.1. Clone project.
 ```
-git clone https://gitlab.com/anhlta/odoo-fitdnu.git
+https://github.com/yukiharadev/TTDN-15-05-N2.git
 ```
-```
-git checkout cntt15_05
-```
+
 
 
 ## 1.2. cài đặt các thư viện cần thiết
