@@ -9,5 +9,5 @@ class LichSuCongTac(models.Model):
     chuc_vu_id = fields.Many2one('chuc_vu', string='Chức vụ', required=True)
     loai_cv = fields.Selection(
         [('Chính', 'Chính'), ('Kiêm nhiệm', 'Kiêm nhiệm')],
-        string="Loại công tác", default='draft'
+        string="Loại công tác", default='Chính'
     )
