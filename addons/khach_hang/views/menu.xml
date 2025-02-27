@@ -12,17 +12,41 @@
             sequence="1"
             action="action_khach_hang"
         />
-        <menuitem name="Quản lý phiếu hỗ trợ"
-            id="menu_phieu_ho_tro"
+        <menuitem name="Phân công"
+            id="menu_phan_cong_cong_viec"
             parent="menu_root"
             sequence="1"
-            action="action_phieu_ho_tro"
+            action="action_phan_cong_cong_viec"
         />
-        <menuitem name="Quản lý giao dịch"
-            id="menu_giao_dich"
-            parent="menu_root"
+        <menuitem name="Công cụ"
+                  id="menu_danh_muc"
+                  parent="menu_root"
+                  sequence="2"
+        />
+        <menuitem name="Phiếu hỗ trợ"
+            id="menu_ho_tro_khach_hang"
+            parent="menu_danh_muc"
             sequence="1"
-            action="action_giao_dich"
+            action="action_ho_tro_khach_hang"
+        />
+        <menuitem name="Khách hàng tiềm năng"
+            id="menu_khach_hang_tiem_nang"
+            parent="menu_danh_muc"
+            sequence="2"
+            action="action_khach_hang_tiem_nang"
+        />
+
+        <menuitem name="Hoạt động"
+            id="menu_hoat_dong"
+            parent="menu_danh_muc"
+            sequence="3"
+            action="action_hoat_dong"
+        />
+        <menuitem name="Hợp đồng"
+            id="menu_hop_dong"
+            parent="menu_danh_muc"
+            sequence="3"
+            action="action_hop_dong"
         />
     </data>
 </odoo>

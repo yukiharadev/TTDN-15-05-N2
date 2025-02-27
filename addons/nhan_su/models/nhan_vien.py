@@ -8,12 +8,7 @@ from odoo.exceptions import ValidationError
 class NhanVien(models.Model):
     _name = 'nhan_vien'
     _description = 'Bảng chứa thông tin nhân viên'
-    _order = 'ma_dinh_danh'
-    _sql_constraints = [
-        ('ma_dinh_danh_unique', 'unique(ma_dinh_danh)', 'Mã định danh phải là duy nhất!')
-    ]
 
-    ma_dinh_danh = fields.Char("Mã định danh", required=True)
     ho_ten = fields.Char(string="Họ tên", required=True)
     ngay_sinh = fields.Date(string= "Ngày sinh")
     que_quan = fields.Char(string="Quê quán")
@@ -26,6 +21,9 @@ class NhanVien(models.Model):
                                            string="Chứng chỉ")
     tuoi = fields.Integer(string="Tuổi", compute='_compute_tuoi', store=True)
     thang_sinh = fields.Integer(string="Tháng sinh", compute='_compute_thang_sinh', store=True)
+    phan_cong_cong_viec_ids = fields.One2many(comodel_name='phan_cong_cong_viec', inverse_name="nhan_vien_id",
+                                           string="Phân công công việc")
+
 
     @api.depends("ngay_sinh")
     def _compute_tuoi(self):

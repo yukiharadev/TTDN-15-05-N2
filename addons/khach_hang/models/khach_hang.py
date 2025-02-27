@@ -15,12 +15,8 @@ class KhachHang(models.Model):
     phone = fields.Char(string='Số điện thoại', required=True)
     address = fields.Char(string='Địa chỉ', required=True)
     birthday = fields.Date(string='Ngày sinh', required=True)
-    loai_khach_hang = fields.Selection([
-        ('doanh_nghiep', 'Doanh nghiệp'),
-        ('ca_nhan', 'Cá nhân')
-    ], default='ca_nhan')
-    phieu_ho_tro_ids = fields.One2many('phieu_ho_tro', 'khach_hang_id', string='Phiếu hỗ trợ')
-    giao_dich_ids = fields.One2many('giao_dich', 'khach_hang_id', string='Giao dịch')
+    ho_tro_ids = fields.One2many('ho_tro_khach_hang', 'nguoi_tao', string='Hỗ trợ khách hàng')
+    khach_hang_tiem_nang_ids = fields.One2many('khach_hang_tiem_nang', 'khach_hang_id', string='Khách hàng tiềm năng')
 
     @api.depends('first_name', 'last_name')
     def _compute_full_name(self):

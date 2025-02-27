@@ -16,13 +16,16 @@
     'category': 'Uncategorized',
     'version': '0.1',
 
-    'depends': ['base'],
+    'depends': ['base',],
 
     'data': [
         'security/ir.model.access.csv',
-        'views/phieu_ho_tro.xml',
-        'views/giao_dich.xml',
         'views/khach_hang.xml',
+        'views/ho_tro_khach_hang.xml',
+        'views/khach_hang_tiem_nang.xml',
+        'views/hoat_dong.xml',
+        'views/hop_dong.xml',
+        'views/phan_cong_cong_viec.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hoat_dong_form" model="ir.ui.view">
+            <field name="name">hoat_dong</field>
+            <field name="model">hoat_dong</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Hoạt động</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="loai_hoat_dong"/>
+                            <field name="chu_de"/>
+                            <field name="ngay_thuc_hien"/>
+                            <field name="trang_thai"/>
+                            <field name="khach_hang_tiem_nang_id"/>
+                        </group>
+                        <notebook>
+                            <page string="Chi tiết phân công">
+                                <field name="phan_cong_cong_viec_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hoat_dong_tree" model="ir.ui.view">
+            <field name="name">hoat_dong</field>
+            <field name="model">hoat_dong</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="chu_de"/>
+                    <field name="loai_hoat_dong"/>
+                    <field name="chu_de"/>
+                    <field name="ngay_thuc_hien"/>
+                    <field name="trang_thai"/>
+                    <field name="khach_hang_tiem_nang_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hoat_dong_search">
+            <field name="model">hoat_dong</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="chu_de"/>
+                    <field name="loai_hoat_dong"/>
+                    <field name="chu_de"/>
+                    <field name="ngay_thuc_hien"/>
+                    <field name="trang_thai"/>
+                    <field name="khach_hang_tiem_nang_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_hoat_dong" model="ir.actions.act_window">
+            <field name="name">Hoạt động</field>
+            <field name="res_model">hoat_dong</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "hoat_dong_search"/>
+        </record>
+    </data>
+</odoo>
+

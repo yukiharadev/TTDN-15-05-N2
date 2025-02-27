@@ -1,3 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_phieu_ho_tro,phieu_ho_tro.phieu_ho_tro,model_phieu_ho_tro,base.group_user,1,1,1,1
-access_giao_dich,giao_dich.giao_dich,model_giao_dich,base.group_user,1,1,1,1
+access_khach_hang,khach_hang.khach_hang,model_khach_hang,base.group_user,1,1,1,1
+access_ho_tro_khach_hang,ho_tro_khach_hang.ho_tro_khach_hang,model_ho_tro_khach_hang,base.group_user,1,1,1,1
+access_khach_hang_tiem_nang,khach_hang_tiem_nang.khach_hang_tiem_nang,model_khach_hang_tiem_nang,base.group_user,1,1,1,1
+access_hoat_dong,hoat_dong.hoat_dong,model_hoat_dong,base.group_user,1,1,1,1
+access_hop_dong,hop_dong.hop_dong,model_hop_dong,base.group_user,1,1,1,1
+access_phan_cong_cong_viec,phan_cong_cong_viec.phan_cong_cong_viec,model_phan_cong_cong_viec,base.group_user,1,1,1,1

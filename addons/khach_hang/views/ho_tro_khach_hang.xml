@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_ho_tro_khach_hang_form" model="ir.ui.view">
+            <field name="name">ho_tro_khach_hang</field>
+            <field name="model">ho_tro_khach_hang</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Phiếu hỗ trợ</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="chu_de"/>
+                            <field name="noi_dung"/>
+                            <field name="muc_do"/>
+                            <field name="trang_thai"/>
+                            <field name="ngay_tao"/>
+                            <field name="ngay_giai_quyet"/>
+                            <field name="nguoi_tao"/>
+                        </group>
+                        <notebook>
+                            <page string="Người được phân công">
+                                <field name="phan_cong_cong_viec_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_ho_tro_khach_hang_tree" model="ir.ui.view">
+            <field name="name">ho_tro_khach_hang</field>
+            <field name="model">ho_tro_khach_hang</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="chu_de"/>
+                    <field name="noi_dung"/>
+                    <field name="muc_do"/>
+                    <field name="trang_thai"/>
+                    <field name="ngay_tao"/>
+                    <field name="ngay_giai_quyet"/>
+                    <field name="nguoi_tao"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="ho_tro_khach_hang_search">
+            <field name="model">ho_tro_khach_hang</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="chu_de"/>
+                    <field name="noi_dung"/>
+                    <field name="muc_do"/>
+                    <field name="trang_thai"/>
+                    <field name="ngay_tao"/>
+                    <field name="ngay_giai_quyet"/>
+                    <field name="nguoi_tao"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_ho_tro_khach_hang" model="ir.actions.act_window">
+            <field name="name">Phiếu Hỗ Trợ</field>
+            <field name="res_model">ho_tro_khach_hang</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "ho_tro_khach_hang_search"/>
+        </record>
+    </data>
+</odoo>
+
