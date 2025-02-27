@@ -6,11 +6,17 @@
             name="QLKH"
             sequence="0"/>
           
-        <menuitem name="Quản khách hàng"
+        <menuitem name="Quản lý khách hàng"
             id="menu_khach_hang"
             parent="menu_root" 
             sequence="1"
             action="action_khach_hang"
+        />
+        <menuitem name="Quản lý hợp đồng"
+            id="menu_hop_dong"
+            parent="menu_root" 
+            sequence="1"
+            action="action_hop_dong"
         />
     </data>
 </odoo>

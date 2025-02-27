@@ -7,14 +7,16 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                        <div class="oe_read_only" style="font-size:25px">Nhân viên</div>
+                        <div class="oe_read_only" style="font-size:25px">Khách hàng</div>
                         <group col="4" string="Thông tin chung">
-                            <field name="first_name"/>
-                            <field name="last_name"/>
+                            <field name="ma_khach_hang"/>
+                            <field name="ho_ten_dem"/>
+                            <field name="ten"/>
+                            <field name="ho_va_ten"/>
                             <field name="email"/>
-                            <field name="phone"/>
-                            <field name="address"/>
-                            <field name="birthday"/>
+                            <field name="so_dien_thoai"/>
+                            <field name="dia_chi"/>
+                            <field name="ngay_tao"/>
                         </group>
                     </sheet>
                 </form>
@@ -26,12 +28,14 @@
             <field name="model">khach_hang</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="first_name"/>
-                    <field name="last_name"/>
+                    <field name="ma_khach_hang"/>
+                    <field name="ho_ten_dem"/>
+                    <field name="ten"/>
+                    <field name="ho_va_ten"/>
                     <field name="email"/>
-                    <field name="phone"/>
-                    <field name="address"/>
-                    <field name="birthday"/>
+                    <field name="so_dien_thoai"/>
+                    <field name="dia_chi"/>
+                    <field name="ngay_tao"/>
                 </tree>
             </field>
         </record>
@@ -40,12 +44,14 @@
             <field name="model">khach_hang</field>
             <field name="arch" type="xml">
                 <search>
-                    <field name="first_name"/>
-                    <field name="last_name"/>
+                    <field name="ma_khach_hang"/>
+                    <field name="ho_ten_dem"/>
+                    <field name="ten"/>
+                    <field name="ho_va_ten"/>
                     <field name="email"/>
-                    <field name="phone"/>
-                    <field name="address"/>
-                    <field name="birthday"/>
+                    <field name="so_dien_thoai"/>
+                    <field name="dia_chi"/>
+                    <field name="ngay_tao"/>
                 </search>
             </field>
         </record>
