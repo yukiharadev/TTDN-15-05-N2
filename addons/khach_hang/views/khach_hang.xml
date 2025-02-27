@@ -7,7 +7,7 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                        <div class="oe_read_only" style="font-size:25px">Nhân viên</div>
+                        <div class="oe_read_only" style="font-size:25px">Khách hàng</div>
                         <group col="4" string="Thông tin chung">
                             <field name="first_name"/>
                             <field name="last_name"/>
@@ -15,7 +15,16 @@
                             <field name="phone"/>
                             <field name="address"/>
                             <field name="birthday"/>
+                            <field name="loai_khach_hang"/>
                         </group>
+                        <notebook>
+                            <page string="Danh sách phiếu hỗ trợ">
+                                <field name="phieu_ho_tro_ids"/>
+                            </page>
+                            <page string="Danh sách giao dịch">
+                                <field name="giao_dich_ids"/>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
@@ -28,10 +37,12 @@
                 <tree>
                     <field name="first_name"/>
                     <field name="last_name"/>
+                    <field name="full_name"/>
                     <field name="email"/>
                     <field name="phone"/>
                     <field name="address"/>
                     <field name="birthday"/>
+                    <field name="loai_khach_hang"/>
                 </tree>
             </field>
         </record>
@@ -46,6 +57,7 @@
                     <field name="phone"/>
                     <field name="address"/>
                     <field name="birthday"/>
+                    <field name="loai_khach_hang"/>
                 </search>
             </field>
         </record>

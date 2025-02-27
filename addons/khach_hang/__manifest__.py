@@ -20,6 +20,8 @@
 
     'data': [
         'security/ir.model.access.csv',
+        'views/phieu_ho_tro.xml',
+        'views/giao_dich.xml',
         'views/khach_hang.xml',
         'views/menu.xml',
     ],
