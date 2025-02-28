@@ -28,12 +28,12 @@ class HoatDong(models.Model):
             if len(record.chu_de.strip()) < 3:
                 raise ValidationError("Chủ đề phải có ít nhất 3 ký tự.")
 
-    @api.constrains('ngay_thuc_hien')
-    def _check_ngay_thuc_hien(self):
-        """Kiểm tra ngày thực hiện không được lớn hơn ngày hiện tại."""
-        for record in self:
-            if record.ngay_thuc_hien and record.ngay_thuc_hien > date.today():
-                raise ValidationError("Ngày thực hiện không hợp lệ! Không thể lớn hơn ngày hiện tại.")
+    # @api.constrains('ngay_thuc_hien')
+    # def _check_ngay_thuc_hien(self):
+    #     """Kiểm tra ngày thực hiện không được lớn hơn ngày hiện tại."""
+    #     for record in self:
+    #         if record.ngay_thuc_hien and record.ngay_thuc_hien > date.today():
+    #             raise ValidationError("Ngày thực hiện không hợp lệ! Không thể lớn hơn ngày hiện tại.")
 
     @api.constrains('trang_thai')
     def _check_trang_thai(self):

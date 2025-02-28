@@ -49,17 +49,17 @@ class KhachHang(models.Model):
             if not re.match(phone_regex, record.phone.strip()):
                 raise ValidationError("Số điện thoại không hợp lệ! Phải có đúng 10 chữ số.")
 
-    @api.constrains('first_name', 'last_name')
-    def _check_name(self):
-        """Kiểm tra tên không chứa ký tự đặc biệt và không quá ngắn."""
-        name_regex = r'^[\p{L}\s]+$'  # Chỉ chấp nhận chữ cái & khoảng trắng (Unicode)
-        for record in self:
-            first_name_clean = record.first_name.strip()
-            last_name_clean = record.last_name.strip()
+    # @api.constrains('first_name', 'last_name')
+    # def _check_name(self):
+    #     """Kiểm tra tên không chứa ký tự đặc biệt và không quá ngắn."""
+    #     name_regex = r'^[\p{L}\s]+$'  # Chỉ chấp nhận chữ cái & khoảng trắng (Unicode)
+    #     for record in self:
+    #         first_name_clean = record.first_name.strip()
+    #         last_name_clean = record.last_name.strip()
 
-            if len(first_name_clean) < 2 or len(last_name_clean) < 2:
-                raise ValidationError("Tên và họ không hợp lệ! Phải có ít nhất 2 ký tự.")
+    #         if len(first_name_clean) < 2 or len(last_name_clean) < 2:
+    #             raise ValidationError("Tên và họ không hợp lệ! Phải có ít nhất 2 ký tự.")
 
-            if not re.match(name_regex, first_name_clean) or not re.match(name_regex, last_name_clean):
-                raise ValidationError("Tên không được chứa ký tự đặc biệt hoặc số!")
+    #         if not re.match(name_regex, first_name_clean) or not re.match(name_regex, last_name_clean):
+    #             raise ValidationError("Tên không được chứa ký tự đặc biệt hoặc số!")
 
