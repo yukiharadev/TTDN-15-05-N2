@@ -22,6 +22,7 @@
         'security/ir.model.access.csv',
         'views/khach_hang.xml',
         'views/hop_dong.xml',
+        'views/khach_hang_tiem_nang.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

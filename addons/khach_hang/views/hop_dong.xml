@@ -17,6 +17,14 @@
                             <field name="currency_id" invisible="1"/>
                             <field name="trang_thai"/>
                         </group>
+                        <notebook>
+                            <page string="Khách hàng kí hợp đồng">
+                                <field name="ma_khach_hang_tiem_nang_ids" />
+                                <!-- <field name="email" />
+                                <field name="so_dien_thoai" />
+                                <field name="chuc_vu" /> -->
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>

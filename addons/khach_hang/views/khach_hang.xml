@@ -18,6 +18,14 @@
                             <field name="dia_chi"/>
                             <field name="ngay_tao"/>
                         </group>
+                        <notebook>
+                            <page string="Thông tin liên hệ">
+                                <field name="lien_he_ids" />
+                                <!-- <field name="email" />
+                                <field name="so_dien_thoai" />
+                                <field name="chuc_vu" /> -->
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>

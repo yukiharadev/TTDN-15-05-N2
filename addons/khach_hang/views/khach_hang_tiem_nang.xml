@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_khach_hang_tiem_nang_form" model="ir.ui.view">
+            <field name="name">khach_hang_tiem_nang</field>
+            <field name="model">khach_hang_tiem_nang</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Khách hàng</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="ma_khach_hang_tiem_nang"/>
+                            <!-- <field name="ma_hop_dong" /> -->
+                            <field name="doanh_thu_tiem_nang" widget="monetary"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="giai_doan"/>
+                            <field name="ngay_du_kien_ky_hop_dong"/>
+                        </group>
+                        <notebook>
+                            <page string="Thông tin liên hệ">
+                                <field name="lien_he_ids" />
+                                <!-- <field name="email" />
+                                <field name="so_dien_thoai" />
+                                <field name="chuc_vu" /> -->
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_khach_hang_tiem_nang_tree" model="ir.ui.view">
+            <field name="name">khach_hang_tiem_nang</field>
+            <field name="model">khach_hang_tiem_nang</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ma_khach_hang_tiem_nang"/>
+                    <!-- <field name="ma_hop_dong" /> -->
+                    <field name="doanh_thu_tiem_nang" widget="monetary"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="giai_doan"/>
+                    <field name="ngay_du_kien_ky_hop_dong"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="khach_hang_tiem_nang_search">
+            <field name="model">khach_hang_tiem_nang</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ma_khach_hang_tiem_nang"/>
+                    <!-- <field name="ma_hop_dong" /> -->
+                    <field name="doanh_thu_tiem_nang" widget="monetary"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="giai_doan"/>
+                    <field name="ngay_du_kien_ky_hop_dong"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_khach_hang_tiem_nang" model="ir.actions.act_window">
+            <field name="name">Khách hàng</field>
+            <field name="res_model">khach_hang_tiem_nang</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "khach_hang_tiem_nang_search"/>
+        </record>
+    </data>
+</odoo>
+

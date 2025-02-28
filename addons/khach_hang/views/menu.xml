@@ -12,6 +12,12 @@
             sequence="1"
             action="action_khach_hang"
         />
+        <menuitem name="Quản lý khách hàng tiềm năng"
+            id="menu_khach_hang_tiem_nang"
+            parent="menu_root" 
+            sequence="1"
+            action="action_khach_hang_tiem_nang"
+        />
         <menuitem name="Quản lý hợp đồng"
             id="menu_hop_dong"
             parent="menu_root" 

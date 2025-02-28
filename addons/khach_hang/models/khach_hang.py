@@ -14,6 +14,7 @@ class KhachHang(models.Model):
     so_dien_thoai = fields.Char("Số điện thoại")
     dia_chi = fields.Char("Địa chỉ")
     ngay_tao = fields.Date("Ngày tạo", default=fields.Date.context_today, readonly=True)
+    lien_he_ids = fields.One2many("lien_he", inverse_name="ma_lien_he", string="Thông tin liên hệ")
 
     @api.depends("ho_ten_dem", "ten")
     def _compute_ho_va_ten(self):
