@@ -16,7 +16,7 @@
     'category': 'Uncategorized',
     'version': '0.1',
 
-    'depends': ['base',],
+    'depends': ['base','nhan_su'],
 
     'data': [
         'security/ir.model.access.csv',

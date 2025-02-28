@@ -21,9 +21,6 @@ class NhanVien(models.Model):
                                            string="Chứng chỉ")
     tuoi = fields.Integer(string="Tuổi", compute='_compute_tuoi', store=True)
     thang_sinh = fields.Integer(string="Tháng sinh", compute='_compute_thang_sinh', store=True)
-    phan_cong_cong_viec_ids = fields.One2many(comodel_name='phan_cong_cong_viec', inverse_name="nhan_vien_id",
-                                           string="Phân công công việc")
-
 
     @api.depends("ngay_sinh")
     def _compute_tuoi(self):

@@ -28,9 +28,6 @@
                                     </tree>
                                 </field>
                             </page>
-                            <page string="Danh sách công việc">
-                                <field name="phan_cong_cong_viec_ids"/>
-                            </page>
                         </notebook>
                     </sheet>
                 </form>

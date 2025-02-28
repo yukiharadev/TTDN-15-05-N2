@@ -48,7 +48,7 @@
         </record>
 
         <record id="action_phan_cong_cong_viec" model="ir.actions.act_window">
-            <field name="name">Hoạt động</field>
+            <field name="name">Phân công</field>
             <field name="res_model">phan_cong_cong_viec</field>
             <field name="view_mode">tree,form</field>
             <field name="search_view_id" ref = "phan_cong_cong_viec_search"/>

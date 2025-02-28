@@ -15,10 +15,7 @@ class KhachHang(models.Model):
     phone = fields.Char(string='Số điện thoại', required=True)
     address = fields.Char(string='Địa chỉ', required=True)
     birthday = fields.Date(string='Ngày sinh', required=True)
-    loai_khach_hang = fields.Selection([
-        ('doanh_nghiep', 'Doanh nghiệp'),
-        ('ca_nhan', 'Cá nhân')
-    ], default='ca_nhan')
+
 
     ho_tro_ids = fields.One2many('ho_tro_khach_hang', 'nguoi_tao', string='Hỗ trợ khách hàng')
     khach_hang_tiem_nang_ids = fields.One2many('khach_hang_tiem_nang', 'khach_hang_id', string='Khách hàng tiềm năng')
@@ -26,7 +23,8 @@ class KhachHang(models.Model):
     @api.depends('first_name', 'last_name')
     def _compute_full_name(self):
         for record in self:
-            record.full_name = f"{record.last_name.strip()} {record.first_name.strip()}"
+            if(record.first_name and record.last_name):
+                record.full_name = f"{record.last_name.strip()} {record.first_name.strip()}"
 
     @api.constrains('birthday')
     def _check_birthday(self):
@@ -65,10 +63,3 @@ class KhachHang(models.Model):
             if not re.match(name_regex, first_name_clean) or not re.match(name_regex, last_name_clean):
                 raise ValidationError("Tên không được chứa ký tự đặc biệt hoặc số!")
 
-    @api.constrains('loai_khach_hang')
-    def _check_loai_khach_hang(self):
-        """Kiểm tra loại khách hàng có hợp lệ không."""
-        valid_types = ['doanh_nghiep', 'ca_nhan']
-        for record in self:
-            if record.loai_khach_hang not in valid_types:
-                raise ValidationError("Loại khách hàng không hợp lệ!")
