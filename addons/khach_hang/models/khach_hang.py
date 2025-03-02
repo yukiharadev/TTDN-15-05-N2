@@ -22,6 +22,8 @@ class KhachHang(models.Model):
     khach_hang_tiem_nang_ids = fields.One2many('khach_hang_tiem_nang', 'khach_hang_id', string='Khách hàng tiềm năng')
     phan_hoi_ids = fields.One2many('phan_hoi_khach_hang', inverse_name='khach_hang_id', string='Phản hồi khách hàng')
     bao_cao_mkt_ids = fields.One2many('bao_cao_marketing', inverse_name='khach_hang_id', string='Báo cáo Marketing')
+    hoat_dong_ids = fields.One2many('hoat_dong', 'khach_hang_id', string='Hoạt động')
+    hop_dong_ids = fields.One2many('hop_dong','khach_hang_id', string='Hợp đồng')
 
     @api.depends('first_name', 'last_name')
     def _compute_full_name(self):

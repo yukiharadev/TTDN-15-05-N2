@@ -14,7 +14,7 @@
                             <field name="ngay_ket_thuc"/>
                             <field name="gia_tri_hop_dong"/>
                             <field name="trang_thai"/>
-                            <field name="khach_hang_tiem_nang_id"/>
+                            <field name="ten_khach_hang"/>
                         </group>
                     </sheet>
                 </form>
@@ -31,7 +31,7 @@
                     <field name="ngay_ket_thuc"/>
                     <field name="gia_tri_hop_dong"/>
                     <field name="trang_thai"/>
-                    <field name="khach_hang_tiem_nang_id"/>
+                    <field name="ten_khach_hang"/>
                 </tree>
             </field>
         </record>
@@ -45,7 +45,7 @@
                     <field name="ngay_ket_thuc"/>
                     <field name="gia_tri_hop_dong"/>
                     <field name="trang_thai"/>
-                    <field name="khach_hang_tiem_nang_id"/>
+                    <field name="ten_khach_hang"/>
 
                 </search>
             </field>

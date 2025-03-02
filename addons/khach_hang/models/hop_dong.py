@@ -15,7 +15,8 @@ class HopDong(models.Model):
         ('huy', 'Hủy')
     ], string="Trạng thái", default='moi')
 
-    khach_hang_tiem_nang_id = fields.Many2one('khach_hang_tiem_nang', string="Khách hàng tiềm năng")
+    khach_hang_id = fields.Many2one('khach_hang', string="Khách hàng")
+    ten_khach_hang = fields.Char(related='khach_hang_id.full_name', string='Khách hàng', store=True)
 
     @api.constrains('ngay_bat_dau', 'ngay_ket_thuc')
     def _check_ngay_hop_dong(self):

@@ -15,14 +15,6 @@
                             <field name="ngay_tao"/>
                             <field name="ngay_cap_nhat"/>
                         </group>
-                        <notebook>
-                            <page string="Hoạt động">
-                                <field name="hoat_dong_ids"/>
-                            </page>
-                            <page string="Hợp đồng">
-                                <field name="hop_dong_ids"/>
-                            </page>
-                        </notebook>
                     </sheet>
                 </form>
             </field>

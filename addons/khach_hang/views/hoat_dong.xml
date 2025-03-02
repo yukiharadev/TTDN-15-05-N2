@@ -13,7 +13,7 @@
                             <field name="chu_de"/>
                             <field name="ngay_thuc_hien"/>
                             <field name="trang_thai"/>
-                            <field name="khach_hang_tiem_nang_id"/>
+                            <field name="ten_khach_hang"/>
                         </group>
                         <notebook>
                             <page string="Chi tiết phân công">
@@ -35,7 +35,7 @@
                     <field name="chu_de"/>
                     <field name="ngay_thuc_hien"/>
                     <field name="trang_thai"/>
-                    <field name="khach_hang_tiem_nang_id"/>
+                    <field name="ten_khach_hang"/>
                 </tree>
             </field>
         </record>
@@ -49,7 +49,7 @@
                     <field name="chu_de"/>
                     <field name="ngay_thuc_hien"/>
                     <field name="trang_thai"/>
-                    <field name="khach_hang_tiem_nang_id"/>
+                    <field name="ten_khach_hang"/>
                 </search>
             </field>
         </record>

@@ -16,7 +16,8 @@ class HoatDong(models.Model):
         ('huy', 'Hủy'),
     ], string='Trạng thái', default='moi')
 
-    khach_hang_tiem_nang_id = fields.Many2one('khach_hang_tiem_nang', string='Khách hàng tiềm năng')
+    khach_hang_id = fields.Many2one('khach_hang', string='Khách hàng')
+    ten_khach_hang = fields.Char(related='khach_hang_id.full_name', string='Khách hàng', store=True)
     phan_cong_cong_viec_ids = fields.One2many('phan_cong_cong_viec', 'hoat_dong_id', string='Phân công công việc')
 
     @api.constrains('loai_hoat_dong', 'chu_de')

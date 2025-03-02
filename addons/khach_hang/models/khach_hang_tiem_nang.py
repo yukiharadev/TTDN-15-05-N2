@@ -15,7 +15,5 @@ class KhachHangTiemNang(models.Model):
     ngay_du_kien_ky_hop_dong = fields.Date(string='Ngày dự kiến ký hợp đồng')
     ngay_tao = fields.Date(string='Ngày tạo', default=fields.Date.today())
     ngay_cap_nhat = fields.Date(string='Ngày cập nhật', default=fields.Date.today())
-    hoat_dong_ids = fields.One2many('hoat_dong', 'khach_hang_tiem_nang_id', string='Hoạt động')
-    hop_dong_ids = fields.One2many('hop_dong','khach_hang_tiem_nang_id', string='Hợp đồng')
 
     khach_hang_id = fields.Many2one('khach_hang', string='Khách hàng')

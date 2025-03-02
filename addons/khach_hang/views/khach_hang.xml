@@ -15,16 +15,20 @@
                             <field name="phone"/>
                             <field name="address"/>
                             <field name="birthday"/>
-                            <field name="cccd"/>
+                            <field name="identity_card"/>
                             <field name="note"/>
                         </group>
                         <notebook>
-                            <page string="Lịch sử hỗ trợ">
-                                <field name="ho_tro_ids"/>
+                            <page string="Hợp đồng">
+                                <field name="hop_dong_ids"/>
                             </page>
 
-                            <page string="Khách hàng tiềm năng">
-                                <field name="khach_hang_tiem_nang_ids"/>
+                            <page string="Hoạt động">
+                                <field name="hoat_dong_ids"/>
+                            </page>
+
+                            <page string="Lịch sử hỗ trợ">
+                                <field name="ho_tro_ids"/>
                             </page>
 
                             <page string="Phản hồi khách hàng">
@@ -48,7 +52,7 @@
                     <field name="phone"/>
                     <field name="address"/>
                     <field name="birthday"/>
-                    <field name="cccd"/>
+                    <field name="identity_card"/>
                     <field name="note"/>
                 </tree>
             </field>
@@ -64,7 +68,7 @@
                     <field name="phone"/>
                     <field name="address"/>
                     <field name="birthday"/>
-                    <field name="cccd"/>
+                    <field name="identity_card"/>
                     <field name="note"/>
                 </search>
             </field>
