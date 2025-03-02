@@ -16,10 +16,10 @@ class KhachHang(models.Model):
     address = fields.Char(string='Địa chỉ', required=True)
     birthday = fields.Date(string='Ngày sinh', required=True)
 
-
     ho_tro_ids = fields.One2many('ho_tro_khach_hang', 'nguoi_tao', string='Hỗ trợ khách hàng')
     khach_hang_tiem_nang_ids = fields.One2many('khach_hang_tiem_nang', 'khach_hang_id', string='Khách hàng tiềm năng')
     phan_hoi_ids = fields.One2many('phan_hoi_khach_hang', inverse_name='khach_hang_id', string='Phản hồi khách hàng')
+    bao_cao_mkt_ids = fields.One2many('bao_cao_marketing', inverse_name='khach_hang_id', string='Báo cáo Marketing')
 
     @api.depends('first_name', 'last_name')
     def _compute_full_name(self):

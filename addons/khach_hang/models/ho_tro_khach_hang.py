@@ -12,17 +12,18 @@ class HoTroKhachHang(models.Model):
         ('thap', 'Thấp'),
         ('trung_binh', 'Trung bình'),
         ('cao', 'Cao')
-    ], default='thap', required=True)
+    ], string="Mức độ", default='thap', required=True)
 
     trang_thai = fields.Selection([
         ('moi', 'Mới'),
         ('dang_xu_ly', 'Đang xử lý'),
         ('da_xu_ly', 'Đã xử lý')
-    ], default='moi', required=True)
+    ], string="Trạng thái", default='moi', required=True)
 
     ngay_tao = fields.Datetime('Ngày tạo', default=fields.Datetime.now)
     ngay_giai_quyet = fields.Datetime('Ngày giải quyết')
     nguoi_tao = fields.Many2one('khach_hang', 'Người tạo', inverse_name='ho_tro_ids')
+    ten_nguoi_tao = fields.Char(related='nguoi_tao.full_name', string='KH tạo', store=True)
 
     phan_cong_cong_viec_ids = fields.One2many('phan_cong_cong_viec', 'ho_tro_khach_hang_id',
                                               string='Phân công công việc')

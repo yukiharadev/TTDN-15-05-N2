@@ -12,16 +12,46 @@
             sequence="1"
             action="action_khach_hang"
         />
-        <menuitem name="Phân công"
-            id="menu_phan_cong_cong_viec"
+        <menuitem name="Khách hàng tiềm năng"
+            id="menu_khach_hang_tiem_nang"
             parent="menu_root"
             sequence="1"
-            action="action_phan_cong_cong_viec"
+            action="action_khach_hang_tiem_nang"
         />
-        <menuitem name="Công cụ"
-                  id="menu_danh_muc"
-                  parent="menu_root"
-                  sequence="2"
+        <menuitem name="Hợp đồng"
+            id="menu_hop_dong"
+            parent="menu_root"
+            sequence="1"
+            action="action_hop_dong"
+        />
+        <menuitem name="Hoạt động"
+            id="menu_hoat_dong"
+            parent="menu_root"
+            sequence="1"
+            action="action_hoat_dong"
+        />
+        <menuitem name="Marketing"
+            id="menu_chien_dich_marketing"
+            parent="menu_root"
+            sequence="1"
+            action="action_chien_dich_marketing"
+        />
+        <menuitem name="Báo cáo Marketing"
+            id="menu_bao_cao_marketing"
+            parent="menu_root"
+            sequence="1"
+            action="action_bao_cao_marketing"
+        />
+        <menuitem name="Khác"
+            id="menu_danh_muc"
+            parent="menu_root"
+            sequence="2"
+        />
+        <menuitem name="Phân công"
+            id="menu_phan_cong_cong_viec"
+            parent="menu_danh_muc"
+            sequence="1"
+            action="action_phan_cong_cong_viec"
         />
         <menuitem name="Phiếu hỗ trợ"
             id="menu_ho_tro_khach_hang"
@@ -29,24 +59,11 @@
             sequence="1"
             action="action_ho_tro_khach_hang"
         />
-        <menuitem name="Khách hàng tiềm năng"
-            id="menu_khach_hang_tiem_nang"
+        <menuitem name="Phản hồi khách hàng"
+            id="menu_phan_hoi_khach_hang"
             parent="menu_danh_muc"
-            sequence="2"
-            action="action_khach_hang_tiem_nang"
-        />
-
-        <menuitem name="Hoạt động"
-            id="menu_hoat_dong"
-            parent="menu_danh_muc"
-            sequence="3"
-            action="action_hoat_dong"
-        />
-        <menuitem name="Hợp đồng"
-            id="menu_hop_dong"
-            parent="menu_danh_muc"
-            sequence="3"
-            action="action_hop_dong"
+            sequence="1"
+            action="action_phan_hoi_khach_hang"
         />
     </data>
 </odoo>

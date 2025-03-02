@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_bao_cao_marketing_form" model="ir.ui.view">
+            <field name="name">bao_cao_marketing</field>
+            <field name="model">bao_cao_marketing</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Báo cáo Marketing</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="ma_bao_cao_mkt"/>
+                            <field name="muc_do_tuong_tac"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_bao_cao_marketing_tree" model="ir.ui.view">
+            <field name="name">bao_cao_marketing</field>
+            <field name="model">bao_cao_marketing</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ma_bao_cao_mkt"/>
+                    <field name="muc_do_tuong_tac"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="bao_cao_marketing_search">
+            <field name="model">bao_cao_marketing</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ma_bao_cao_mkt"/>
+                    <field name="muc_do_tuong_tac"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_bao_cao_marketing" model="ir.actions.act_window">
+            <field name="name">Báo cáo Marketing</field>
+            <field name="res_model">bao_cao_marketing</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "bao_cao_marketing_search"/>
+        </record>
+    </data>
+</odoo>
+

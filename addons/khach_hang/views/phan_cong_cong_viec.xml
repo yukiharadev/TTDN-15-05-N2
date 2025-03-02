@@ -9,9 +9,9 @@
                     <sheet>
                         <div class="oe_read_only" style="font-size:25px">Hoạt động</div>
                         <group col="4" string="Thông tin chung">
-                            <field name="nhan_vien_id"/>
-                            <field name="hoat_dong_id"/>
-                            <field name="ho_tro_khach_hang_id"/>
+                            <field name="ten_nhan_vien"/>
+                            <field name="ten_hoat_dong"/>
+                            <field name="van_de_ho_tro"/>
                             <field name="ngay_phan_cong"/>
                             <field name="trang_thai"/>
                         </group>
@@ -25,9 +25,9 @@
             <field name="model">phan_cong_cong_viec</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="nhan_vien_id"/>
-                    <field name="hoat_dong_id"/>
-                    <field name="ho_tro_khach_hang_id"/>
+                    <field name="ten_nhan_vien"/>
+                    <field name="ten_hoat_dong"/>
+                    <field name="van_de_ho_tro"/>
                     <field name="ngay_phan_cong"/>
                     <field name="trang_thai"/>
                 </tree>
@@ -38,9 +38,9 @@
             <field name="model">phan_cong_cong_viec</field>
             <field name="arch" type="xml">
                 <search>
-                    <field name="nhan_vien_id"/>
-                    <field name="hoat_dong_id"/>
-                    <field name="ho_tro_khach_hang_id"/>
+                    <field name="ten_nhan_vien"/>
+                    <field name="ten_hoat_dong"/>
+                    <field name="van_de_ho_tro"/>
                     <field name="ngay_phan_cong"/>
                     <field name="trang_thai"/>
                 </search>

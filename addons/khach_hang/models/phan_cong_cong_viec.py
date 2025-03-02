@@ -7,8 +7,11 @@ class PhanCongCongViec(models.Model):
     _description = 'Phân công công việc'
 
     nhan_vien_id = fields.Many2one('nhan_vien', string='Mã nhân viên', required=True)
+    ten_nhan_vien = fields.Char(related='nhan_vien_id.ho_ten', string='Nhân viên', store=True)
     hoat_dong_id = fields.Many2one('hoat_dong', string='Hoạt động')
+    ten_hoat_dong = fields.Char(related='hoat_dong_id.chu_de', string='Hoạt động', store=True)
     ho_tro_khach_hang_id = fields.Many2one('ho_tro_khach_hang', string='Hỗ trợ khách hàng')
+    van_de_ho_tro = fields.Char(related='ho_tro_khach_hang_id.chu_de', string="Vấn đề cần hỗ trợ", store=True)
     ngay_phan_cong = fields.Date(string='Ngày phân công', required=True)
     trang_thai = fields.Selection([
         ('moi', 'Mới'),

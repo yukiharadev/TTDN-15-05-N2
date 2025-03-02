@@ -7,13 +7,13 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                        <div class="oe_read_only" style="font-size:25px">Hợp đồng</div>
+                        <div class="oe_read_only" style="font-size:25px">Phản hồi khách hàng</div>
                         <group col="4" string="Thông tin chung">
                             <field name="ma_phan_hoi"/>
                             <field name="loai_phan_hoi"/>
                             <field name="noi_dung"/>
                             <field name="ngay_danh_gia"/>
-                            <field name="khach_hang_id"/>
+                            <field name="khach_hang_phan_hoi"/>
                         </group>
                     </sheet>
                 </form>
@@ -29,7 +29,7 @@
                     <field name="loai_phan_hoi"/>
                     <field name="noi_dung"/>
                     <field name="ngay_danh_gia"/>
-                    <field name="khach_hang_id"/>
+                    <field name="khach_hang_phan_hoi"/>
                 </tree>
             </field>
         </record>
@@ -42,13 +42,13 @@
                     <field name="loai_phan_hoi"/>
                     <field name="noi_dung"/>
                     <field name="ngay_danh_gia"/>
-                    <field name="khach_hang_id"/>
+                    <field name="khach_hang_phan_hoi"/>
                 </search>
             </field>
         </record>
 
         <record id="action_phan_hoi_khach_hang" model="ir.actions.act_window">
-            <field name="name">Hợp đồng</field>
+            <field name="name">Phản hồi khách hàng</field>
             <field name="res_model">phan_hoi_khach_hang</field>
             <field name="view_mode">tree,form</field>
             <field name="search_view_id" ref = "phan_hoi_khach_hang_search"/>

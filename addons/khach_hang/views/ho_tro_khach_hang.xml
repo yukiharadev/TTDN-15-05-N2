@@ -15,7 +15,7 @@
                             <field name="trang_thai"/>
                             <field name="ngay_tao"/>
                             <field name="ngay_giai_quyet"/>
-                            <field name="nguoi_tao"/>
+                            <field name="ten_nguoi_tao"/>
                         </group>
                         <notebook>
                             <page string="Người được phân công">
@@ -38,7 +38,7 @@
                     <field name="trang_thai"/>
                     <field name="ngay_tao"/>
                     <field name="ngay_giai_quyet"/>
-                    <field name="nguoi_tao"/>
+                    <field name="ten_nguoi_tao"/>
                 </tree>
             </field>
         </record>
@@ -53,7 +53,7 @@
                     <field name="trang_thai"/>
                     <field name="ngay_tao"/>
                     <field name="ngay_giai_quyet"/>
-                    <field name="nguoi_tao"/>
+                    <field name="ten_nguoi_tao"/>
                 </search>
             </field>
         </record>
