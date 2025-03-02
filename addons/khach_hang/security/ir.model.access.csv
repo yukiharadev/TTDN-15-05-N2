@@ -5,3 +5,4 @@ access_khach_hang_tiem_nang,khach_hang_tiem_nang.khach_hang_tiem_nang,model_khac
 access_hoat_dong,hoat_dong.hoat_dong,model_hoat_dong,base.group_user,1,1,1,1
 access_hop_dong,hop_dong.hop_dong,model_hop_dong,base.group_user,1,1,1,1
 access_phan_cong_cong_viec,phan_cong_cong_viec.phan_cong_cong_viec,model_phan_cong_cong_viec,base.group_user,1,1,1,1
+access_phan_hoi_khach_hang,phan_hoi_khach_hang.phan_hoi_khach_hang,model_phan_hoi_khach_hang,base.group_user,1,1,1,1
