@@ -26,6 +26,7 @@
         'views/hoat_dong.xml',
         'views/hop_dong.xml',
         'views/phan_cong_cong_viec.xml',
+        'views/phan_hoi_khach_hang.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode
