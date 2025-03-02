@@ -15,6 +15,8 @@ class KhachHang(models.Model):
     phone = fields.Char(string='Số điện thoại', required=True)
     address = fields.Char(string='Địa chỉ', required=True)
     birthday = fields.Date(string='Ngày sinh', required=True)
+    identity_card = fields.Char(string='CCCD', required=True)
+    note = fields.Char(string='Ghi chú')
 
     ho_tro_ids = fields.One2many('ho_tro_khach_hang', 'nguoi_tao', string='Hỗ trợ khách hàng')
     khach_hang_tiem_nang_ids = fields.One2many('khach_hang_tiem_nang', 'khach_hang_id', string='Khách hàng tiềm năng')

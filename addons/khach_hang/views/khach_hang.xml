@@ -15,6 +15,8 @@
                             <field name="phone"/>
                             <field name="address"/>
                             <field name="birthday"/>
+                            <field name="cccd"/>
+                            <field name="note"/>
                         </group>
                         <notebook>
                             <page string="Lịch sử hỗ trợ">
@@ -46,6 +48,8 @@
                     <field name="phone"/>
                     <field name="address"/>
                     <field name="birthday"/>
+                    <field name="cccd"/>
+                    <field name="note"/>
                 </tree>
             </field>
         </record>
@@ -60,6 +64,8 @@
                     <field name="phone"/>
                     <field name="address"/>
                     <field name="birthday"/>
+                    <field name="cccd"/>
+                    <field name="note"/>
                 </search>
             </field>
         </record>

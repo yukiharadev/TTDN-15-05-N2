@@ -10,6 +10,7 @@
                         <div class="oe_read_only" style="font-size:25px">Báo cáo Marketing</div>
                         <group col="4" string="Thông tin chung">
                             <field name="ma_bao_cao_mkt"/>
+                            <field name="khach_hang_tham_gia"/>
                             <field name="muc_do_tuong_tac"/>
                         </group>
                     </sheet>
@@ -23,6 +24,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="ma_bao_cao_mkt"/>
+                    <field name="khach_hang_tham_gia"/>
                     <field name="muc_do_tuong_tac"/>
                 </tree>
             </field>
@@ -33,6 +35,7 @@
             <field name="arch" type="xml">
                 <search>
                     <field name="ma_bao_cao_mkt"/>
+                    <field name="khach_hang_tham_gia"/>
                     <field name="muc_do_tuong_tac"/>
                 </search>
             </field>

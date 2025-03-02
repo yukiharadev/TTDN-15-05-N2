@@ -13,4 +13,5 @@ class BaoCaoMarketing(models.Model):
     ], string='Mức độ tương tác', required=True)
 
     khach_hang_id = fields.Many2one("khach_hang", string="Khách hàng", required=True)
+    khach_hang_tham_gia = fields.Char(related="khach_hang_id.full_name", string="Khách hàng tham gia", store=True)
     chien_dich_mkt_id = fields.Many2one("chien_dich_marketing", string="Chiến dịch Marketing", required=True)
