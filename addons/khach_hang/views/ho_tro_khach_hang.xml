@@ -21,6 +21,10 @@
                             <page string="Người được phân công">
                                 <field name="phan_cong_cong_viec_ids"/>
                             </page>
+
+                            <page string="Topic hỗ trợ">
+                                <field name="topic_ho_tro_ids" />
+                            </page>
                         </notebook>
                     </sheet>
                 </form>

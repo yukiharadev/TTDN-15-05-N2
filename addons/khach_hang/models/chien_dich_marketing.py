@@ -25,3 +25,10 @@ class ChienDichMarketing(models.Model):
         for record in self:
             if record.ngay_ket_thuc and record.ngay_bat_dau and record.ngay_ket_thuc <= record.ngay_bat_dau:
                 raise ValidationError(_("Ngày kết thúc không thể trước ngày bắt đầu."))
+            
+    def action_change_giai_doan_trien_khai(self):
+        for record in self:
+            if record.giai_doan_trien_khai == 'Ý tưởng':
+                record.giai_doan_trien_khai = 'Đang triển khai'
+            elif record.giai_doan_trien_khai == 'Đang triển khai':
+                record.giai_doan_trien_khai = 'Kết thúc'

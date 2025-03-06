@@ -8,3 +8,4 @@ access_phan_cong_cong_viec,phan_cong_cong_viec.phan_cong_cong_viec,model_phan_co
 access_phan_hoi_khach_hang,phan_hoi_khach_hang.phan_hoi_khach_hang,model_phan_hoi_khach_hang,base.group_user,1,1,1,1
 access_chien_dich_marketing,chien_dich_marketing.chien_dich_marketing,model_chien_dich_marketing,base.group_user,1,1,1,1
 access_bao_cao_marketing,bao_cao_marketing.bao_cao_marketing,model_bao_cao_marketing,base.group_user,1,1,1,1
+access_topic_ho_tro,topic_ho_tro.topic_ho_tro,model_topic_ho_tro,base.group_user,1,1,1,1

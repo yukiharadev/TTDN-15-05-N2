@@ -27,6 +27,7 @@ class HoTroKhachHang(models.Model):
 
     phan_cong_cong_viec_ids = fields.One2many('phan_cong_cong_viec', 'ho_tro_khach_hang_id',
                                               string='Phân công công việc')
+    topic_ho_tro_ids = fields.One2many('topic_ho_tro', 'ho_tro_khach_hang_id', string='Topic hỗ trợ')
 
     @api.constrains('chu_de')
     def _check_chu_de(self):

@@ -6,7 +6,10 @@ class HoatDong(models.Model):
     _name = 'hoat_dong'
     _description = 'Hoạt động'
 
-    loai_hoat_dong = fields.Char(string='Loại hoạt động', required=True)
+    loai_hoat_dong = fields.Selection([
+        ('Hỗ trợ khách hàng', 'Hỗ trợ khách hàng'),
+        ('Marketing', 'Marketing'),
+    ], string="Loại hoạt động", required=True)
     chu_de = fields.Char(string='Chủ đề', required=True)
     ngay_thuc_hien = fields.Date(string='Ngày thực hiện', required=True)
     trang_thai = fields.Selection([
@@ -17,7 +20,7 @@ class HoatDong(models.Model):
     ], string='Trạng thái', default='moi')
 
     khach_hang_id = fields.Many2one('khach_hang', string='Khách hàng')
-    ten_khach_hang = fields.Char(related='khach_hang_id.full_name', string='Khách hàng', store=True)
+    ten_khach_hang = fields.Char(related='khach_hang_id.full_name', string='Tên khách hàng', store=True)
     phan_cong_cong_viec_ids = fields.One2many('phan_cong_cong_viec', 'hoat_dong_id', string='Phân công công việc')
 
     @api.constrains('loai_hoat_dong', 'chu_de')

@@ -29,6 +29,7 @@
         'views/phan_hoi_khach_hang.xml',
         'views/chien_dich_marketing.xml',
         'views/bao_cao_marketing.xml',
+        'views/topic_ho_tro.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

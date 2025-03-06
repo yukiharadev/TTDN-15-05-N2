@@ -14,15 +14,18 @@
                             <field name="mo_ta"/>
                             <field name="ngay_bat_dau"/>
                             <field name="ngay_ket_thuc"/>
-                            <field name="ngay_ket_thuc"/>
                             <field name="ngan_sach"/>
                             <field name="giai_doan_trien_khai"/>
                         </group>
                         <notebook>
-                            <page string="Báo cáo Marketing">
+                            <page string="Báo cáo Marketing" attrs="{'invisible': [('giai_doan_trien_khai', 'in', ['Đang triển khai', 'Ý tưởng'])]}">
                                 <field name="bao_cao_mkt_ids"/>
                             </page>
                         </notebook>
+                        <footer>
+                            <button name="action_change_giai_doan_trien_khai" type="object" string="Phê duyệt" class="btn-primary" attrs="{'invisible': [('giai_doan_trien_khai', 'in', ['Đang triển khai', 'Kết thúc'])]}"/>
+                            <button name="action_change_giai_doan_trien_khai" type="object" string="Kết thúc" class="btn-primary" attrs="{'invisible': [('giai_doan_trien_khai', 'in', ['Ý tưởng', 'Kết thúc'])]}"/>
+                        </footer>
                     </sheet>
                 </form>
             </field>
@@ -38,7 +41,6 @@
                     <field name="mo_ta"/>
                     <field name="ngay_bat_dau"/>
                     <field name="ngay_ket_thuc"/>
-                    <field name="ngay_ket_thuc"/>
                     <field name="ngan_sach"/>
                     <field name="giai_doan_trien_khai"/>
                 </tree>
@@ -53,7 +55,6 @@
                     <field name="ten_chien_dich"/>
                     <field name="mo_ta"/>
                     <field name="ngay_bat_dau"/>
-                    <field name="ngay_ket_thuc"/>
                     <field name="ngay_ket_thuc"/>
                     <field name="ngan_sach"/>
                     <field name="giai_doan_trien_khai"/>

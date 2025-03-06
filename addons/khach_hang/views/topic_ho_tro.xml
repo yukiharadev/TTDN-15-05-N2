@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_topic_ho_tro_form" model="ir.ui.view">
+            <field name="name">topic_ho_tro</field>
+            <field name="model">topic_ho_tro</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Topic hỗ trợ</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="nhan_vien_tra_loi"/>
+                            <field name="khach_hang_tra_loi"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_topic_ho_tro_tree" model="ir.ui.view">
+            <field name="name">topic_ho_tro</field>
+            <field name="model">topic_ho_tro</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nhan_vien_tra_loi"/>
+                    <field name="khach_hang_tra_loi"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="topic_ho_tro_search">
+            <field name="model">topic_ho_tro</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nhan_vien_tra_loi"/>
+                    <field name="khach_hang_tra_loi"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_topic_ho_tro" model="ir.actions.act_window">
+            <field name="name">Topic hỗ trợ</field>
+            <field name="res_model">topic_ho_tro</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "topic_ho_tro_search"/>
+        </record>
+    </data>
+</odoo>
+
