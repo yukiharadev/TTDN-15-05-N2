@@ -43,6 +43,9 @@
                     <field name="noi_dung"/>
                     <field name="ngay_danh_gia"/>
                     <field name="khach_hang_phan_hoi"/>
+                    <searchpanel>
+                        <field name="khach_hang_id" filter="1"/>
+                    </searchpanel>
                 </search>
             </field>
         </record>

@@ -46,7 +46,9 @@
                     <field name="gia_tri_hop_dong"/>
                     <field name="trang_thai"/>
                     <field name="ten_khach_hang"/>
-
+                    <searchpanel>
+                        <field name="khach_hang_id" filter="1"/>
+                    </searchpanel>
                 </search>
             </field>
         </record>

@@ -58,6 +58,9 @@
                     <field name="ngay_tao"/>
                     <field name="ngay_giai_quyet"/>
                     <field name="ten_nguoi_tao"/>
+                    <searchpanel>
+                        <field name="nguoi_tao" filter="1"/>
+                    </searchpanel>
                 </search>
             </field>
         </record>

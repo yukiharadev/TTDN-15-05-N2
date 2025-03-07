@@ -43,6 +43,11 @@
                     <field name="van_de_ho_tro"/>
                     <field name="ngay_phan_cong"/>
                     <field name="trang_thai"/>
+                    <searchpanel>
+                        <field name="nhan_vien_id" filter="1"/>
+                        <field name="hoat_dong_id" filter="1"/>
+                        <field name="ho_tro_khach_hang_id" filter="1"/>
+                    </searchpanel>
                 </search>
             </field>
         </record>

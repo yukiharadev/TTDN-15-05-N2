@@ -13,6 +13,8 @@
                             <field name="khach_hang_id"/>
                             <field name="khach_hang_tham_gia"/>
                             <field name="muc_do_tuong_tac"/>
+                            <field name="chien_dich_mkt_id"/>
+                            <field name="ten_chien_dich"/>
                         </group>
                     </sheet>
                 </form>
@@ -25,9 +27,9 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="ma_bao_cao_mkt"/>
-                    <field name="khach_hang_id"/>
                     <field name="khach_hang_tham_gia"/>
                     <field name="muc_do_tuong_tac"/>
+                    <field name="ten_chien_dich"/>
                 </tree>
             </field>
         </record>
@@ -40,6 +42,12 @@
                     <field name="khach_hang_id"/>
                     <field name="khach_hang_tham_gia"/>
                     <field name="muc_do_tuong_tac"/>
+                    <field name="chien_dich_mkt_id"/>
+                    <field name="ten_chien_dich"/>
+                    <searchpanel>
+                        <field name="khach_hang_id" filter="1"/>
+                        <field name="chien_dich_mkt_id" filter="1"/>
+                    </searchpanel>
                 </search>
             </field>
         </record>
